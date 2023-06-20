@@ -1,0 +1,38 @@
+.navbar {
+    height : 50px;
+    background-color:#0047AB;
+    display : flex;
+    color : white;
+    justify-content: space-between;
+}
+.brand {
+    margin-left:10px;
+    font-size: 18px;
+}
+.leftNav {
+    display : flex;
+
+}
+.homeTodo {
+    margin-top: 19px;
+    margin-left: 10px;
+}
+ul {
+    list-style-type: none;
+}
+.homeTodo {
+    display : flex;
+
+}
+.loginLogout {
+    display : flex;
+    margin-right: 5px;
+
+}
+a:link {
+    color : white;
+}
+a:visited {
+    color : white;
+
+}
