@@ -30,10 +30,10 @@ export class LoginComponent {
     console.log("password", this.password);
 
     //if ( ( this.username !== 'Manoj' ) || (this.password !== 'dummy') ) {
-    if (this.hardcodedAuthenticationService.authenticate(this.username, this.password))  {
-      this.invalidLogin = true;
-    } else {
+    if (this.hardcodedAuthenticationService.authenticate(this.username, this.password))  {      
       this.router.navigate(['welcome',this.username]);
+    } else {
+      this.invalidLogin = true;
     }
 
   }
