@@ -5,15 +5,15 @@
                  <p><a href="manojrahavan12.in" class="">MyPortfolio</a></p>
             </div>
             <div class="homeTodo">
-                    <span><a routerLink="/welcome/Manoj" class="">Home</a> </span> &nbsp;&nbsp;
-                    <span><a routerLink="/todos" class="">Todos</a></span>
+                    <span><a *ngIf="this.hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/welcome/Manoj" class="">Home</a> </span> &nbsp;&nbsp;
+                    <span><a *ngIf="this.hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/todos" class="">Todos</a></span>
             </div>
         </div>
 
         <div class="rightNav" >
             <ul class="loginLogout">
-                <li> <a routerLink="/login" class="login">Login</a></li>&nbsp;&nbsp;
-                <li> <a routerLink="/logout" class="logout">Logout</a></li>
+                <li> <a  *ngIf="!this.hardcodedAuthenticationService.isUserLoggedIn()"routerLink="/login" class="login">Login</a></li>&nbsp;&nbsp;
+                <li> <a  *ngIf="this.hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="logout">Logout</a></li>
             </ul>
         </div>
     </nav>
