@@ -19,10 +19,12 @@ export class HardcodedAuthenticationService {
   isUserLoggedIn () {
     let user = sessionStorage.getItem('authenticatedUser');
 
-    return (user !== null)
-      
+    return (user !== null)      
   }
 
+  logout() {
+    sessionStorage.removeItem('authenticatedUser');
+  }
 
 
 }
